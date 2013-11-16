@@ -3,7 +3,8 @@ require.config({
 
     paths: {
         app: '../app',
-        templates: '../../templates'
+        templates: '../../templates',
+        extensions: '../extensions'
     },
 
     shim: {

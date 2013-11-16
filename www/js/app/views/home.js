@@ -4,6 +4,7 @@ define(function(require) {
 
     var _ = require('underscore'),
         Backbone = require('backbone'),
+        GeoLocation = require('extensions/GeoLocation'),
         homeTemplate = require('text!templates/home.html'),
 
         template = _.template(homeTemplate);
@@ -13,6 +14,10 @@ define(function(require) {
 
         initialize: function () {
             //this.render();
+            /*** Load GeoLocation ***/
+            var geoLocation = new GeoLocation();
+            geoLocation.update();
+            console.log(geoLocation.get('coords'));
         },
 
         render: function () {
