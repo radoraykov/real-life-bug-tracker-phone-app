@@ -14,10 +14,13 @@ define(function(require) {
 
         initialize: function () {
             //this.render();
+
             /*** Load GeoLocation ***/
+            /*
             var geoLocation = new GeoLocation();
             geoLocation.update();
-            console.log(geoLocation.get('coords'));
+            geoLocation.addGoogleMap('geoLocation');
+            */
         },
 
         render: function () {

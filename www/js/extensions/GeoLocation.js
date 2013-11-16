@@ -49,6 +49,17 @@ define(function(require) {
 
 		getLongitude: function () {
 			return this.get('longitude');
+		}, 
+
+		addGoogleMap: function(elementId) {
+			var myLocation = new google.maps.LatLng(
+				this.get('latitude'), this.get('longitude')); 
+
+			map  = new google.maps.Map(document.getElementById(elementId), {
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+				center: myLocation,
+				zoom: 15
+    		}); 
 		}
 	});
 

@@ -22,7 +22,14 @@
 
         <script type="text/javascript" src="js/lib/appframework/appframework.ui.js"></script>
         <script type="text/javascript" src="js/lib/appframework/plugins/af.transitions.js"></script>
-    
+        
+        <!-- Google Map API -->
+        <script type="text/javascript" 
+                src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=true&amp;libraries=places">
+        </script> 
+        <script type="text/javascript" src="js/extensions/GeoLocationPrototype.js"></script>
+        <!-- Google Map API -->
+
         <script type="text/javascript">
             $.os.useOSThemes = false;
             $.ui.autoLaunch = false;
@@ -79,6 +86,15 @@
         <script data-main="js/start" src="js/lib/require.js"></script>
 
         <title>Grada.me</title>
+
+        <style>
+            #geoLocation
+            {
+                width: 100px;
+                height: 100px;
+                border: 1px solid red;
+            }
+        </style>
     </head>
     <body>
         <div id="afui" class="gradame">
@@ -100,6 +116,8 @@
                     <a href="#newpage" id="navbar_newpage" class="icon stack" data-ignore-pressed="true" data-resethistory="true" style="width: 50%;">Test 2</a>
                 </footer>
             </div>
+
+            <div id="geoLocation"></div>
         </div>
     </body>
 </html>
