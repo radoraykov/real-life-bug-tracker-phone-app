@@ -29,9 +29,7 @@
             $.ui.openLinksNewTab = false;
             $.ui.showBackButton = false;
             $.ui.lockPageBounce = true;
-            $.ui.noPanelTransition = true;
             $.ui.canCollapse = true;
-            $.ui.disableSideMenu();
 
             $.app = { version: '0.0.1', panel: null, router: null, database: null, photos: [], ui: {}, userId: null };
             $(document).ready(function() {
@@ -80,7 +78,7 @@
         </script>
         <script data-main="js/start" src="js/lib/require.js"></script>
 
-        <title>Sliki</title>
+        <title>Grada.me</title>
     </head>
     <body>
         <div id="afui" class="gradame">
@@ -94,6 +92,13 @@
                 <div title="Homescreen" id="home" class="panel" selected="true" data-load="loadedPanel" data-unload="unloadedPanel" data-tab="navbar_home">
                     
                 </div>
+            </div>
+
+            <div id="navbar">
+                <footer id="footerui">
+                    <a href="#home" id="navbar_home" class="icon home" data-ignore-pressed="true" data-resethistory="true" style="width: 50%;">Test 1</a>
+                    <a href="#newpage" id="navbar_newpage" class="icon stack" data-ignore-pressed="true" data-resethistory="true" style="width: 50%;">Test 2</a>
+                </footer>
             </div>
         </div>
     </body>

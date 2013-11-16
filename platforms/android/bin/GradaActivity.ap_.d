@@ -16,6 +16,7 @@
 /Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/cordova.js \
 /Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/cordova_plugins.js \
 /Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/css \
+/Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/fonts \
 /Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/img \
 /Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/index.html \
 /Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/js \
@@ -25,7 +26,14 @@
 /Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/spec \
 /Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/spec.html \
 /Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/templates \
-/Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/css/index.css \
+/Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/css/appframework \
+/Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/css/gradame.css \
+/Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/css/main.css \
+/Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/css/appframework/af.ui.base.css \
+/Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/css/appframework/icons.css \
+/Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/fonts/roboto-bold.ttf \
+/Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/fonts/roboto-light.ttf \
+/Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/fonts/roboto-regular.ttf \
 /Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/img/logo.png \
 /Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/js/app \
 /Library/WebServer/Documents/grada.me/real-life-bug-tracker-phone-app/platforms/android/assets/www/js/lib \
