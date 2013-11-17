@@ -1,0 +1,321 @@
+$red: #eb6a55
+$orange: #ffa754
+$facebookBlue: #4c67a1
+$green: #57bca8
+$darkBeige: #c4bdad
+
+$headerHeight: 100px
+$tabHeight: 100px
+$footerHeight: 115px
+$buttonHeight: 40px
+$searchHeight: 40px
+$mapHeight: 200px
+$smallPreviewHeight: 300px
+
+$fontSizeSmall: 15px
+$fontSizeNormal: 25px
+
+body
+  background: #fff
+
+*
+  box-sizing: border-box
+
+ul, li
+  margin: 0
+  list-style: none
+  padding: 0
+
+input
+  padding: 5px 4px
+  border: none
+
+.homeScreen
+  background: url('../img/bg.png') no-repeat top center
+  background-size: 100%
+
+.button
+  display: block
+  line-height: $buttonHeight
+  font-size: $fontSizeNormal
+  padding: 10px 0 11px
+  text-align: center
+  background: $red
+  color: #fff
+  text-decoration: none
+  text-transform: uppercase
+  margin: 5px 0
+  border-radius: 3px
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1)
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1), inset -1px 0 rgba(255,255,255,0.3)
+
+  &:active
+    box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.3)
+    text-shadow: none
+    padding: 11px 0 10px
+
+  &.facebook
+    background: $facebookBlue
+
+  &.success
+    background: $green
+
+  &.unobtrusive
+    background: $darkBeige
+
+
+header
+  height: $headerHeight
+  background: #eb6a55
+
+  a 
+    color: #fff
+    text-decoration: none
+
+  .details
+    float: left
+    width: $headerHeight
+    height: $headerHeight
+    font-size: $fontSizeNormal
+    line-height: $headerHeight
+    text-align: center
+
+  .add
+    float: right
+    height: $headerHeight
+
+    font-size: $fontSizeNormal
+    line-height: $headerHeight
+    text-align: center
+    font-size: $fontSizeNormal
+
+  .logo
+    background: url('../img/smalllogo.png') no-repeat center
+    background-size: 100%
+    display: block
+    width: 148px
+    height: $headerHeight
+    float: left
+
+
+list
+  background: #fff
+  display: block
+  padding: 10px
+
+  .title
+    background: #e3e3e3
+    font-weight: bold
+    padding: $fontSizeNormal
+    font-size: $fontSizeNormal
+
+  li
+    a
+      font-size: $fontSizeNormal
+      display: block
+      color: #333
+      padding: $fontSizeNormal / 1.1
+      border-bottom: solid 1px #e5e5e5
+      text-decoration: none
+
+      &:active
+        background: #fafafa
+
+    ul
+      li:last-child
+        a
+          border-bottom: none
+
+
+
+tabs, footer
+  display: block
+  height: $tabHeight
+
+  a
+    text-decoration: none
+    font-size: $fontSizeNormal * 2
+    background: #fcfaf7
+    color: #989795
+    height: $footerHeight
+    line-height: $footerHeight
+    text-align: center
+    width: 50%
+    float: left
+
+    &:first-child
+      box-shadow: inset -10px 10px 10px rgba(255,255,255,0.5)
+
+      &.selected
+        box-shadow: inset -10px 10px 10px rgba(0,0,0,0.05), inset -2px 2px 5px rgba(0,0,0,0.1)
+        background: #ebe8e2
+        color: #222
+
+    &:last-child
+      box-shadow: inset 10px 10px 10px rgba(255,255,255,0.5)
+
+      &.selected
+        box-shadow: inset 10px 10px 10px rgba(0,0,0,0.05), inset 2px 2px 5px rgba(0,0,0,0.1)
+        background: #ebe8e2
+        color: #222
+
+search
+  padding: 10px
+  display: block
+
+  .search-field
+    border-radius: 3px
+    position: relative
+    font-size: $fontSizeNormal
+
+  .icon-search
+    color: #999
+    top: 8px
+    vertical-align: middle
+    line-height: $searchHeight
+    left: $fontSizeNormal / 2
+    position: absolute
+    font-size: $fontSizeNormal
+
+  input
+    color: #333
+    outline: none
+    border-radius: 3px
+    display: block
+    width: 100%
+    line-height: $searchHeight
+    font-size: $fontSizeNormal
+    bakgound: #fff
+    text-indent: $fontSizeNormal + $fontSizeNormal / 2
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.2)
+    border-top: solid 1px rgba(0,0,0,0.3)
+    border-left: solid 1px rgba(0,0,0,0.2)
+    border-right: solid 1px rgba(0,0,0,0.2)
+
+footer
+  display: block
+  height: $footerHeight
+
+  a
+    text-decoration: none
+    font-size: $fontSizeNormal
+    background: #4b515f
+    color: #ddd
+    height: $footerHeight
+    line-height: $footerHeight
+    text-align: center
+    width: 50%
+    float: left
+
+    &:first-child
+      box-shadow: inset -10px 10px 30px rgba(255,255,255,0.1)
+
+      &.selected
+        box-shadow: inset -10px -10px 20px rgba(0,0,0,0.1), inset -5px -5px 10px rgba(0,0,0,0.1), inset -2px 2px 5px rgba(0,0,0,0.1)
+        background: #30343f
+        color: #fff
+
+    &:last-child
+      box-shadow: inset 10px 10px 30px rgba(255,255,255,0.1)
+
+      &.selected
+        box-shadow: inset 10px -10px 20px rgba(0,0,0,0.1), inset 5px -5px 10px rgba(0,0,0,0.1), inset 2px 2px 5px rgba(0,0,0,0.1)
+        background: #30343f
+        color: #fff
+
+
+
+.report-info
+  h1
+    font-weight: bold
+    font-size: $fontSizeNormal * 1.5
+    margin: 0
+
+  .details
+    font-size: $fontSizeSmall
+
+  .description
+    font-size: $fontSizeNormal
+
+
+
+.map-wrapper
+
+  .map
+    background: #e9e5dd
+    height: $mapHeight
+
+  .address
+    background: fcfbf9
+    padding: 10px
+    font-size: $fontSizeSmall
+
+  .proximity
+    float: right
+
+
+.small-preview
+  height: $smallPreviewHeight
+  overflow: hidden
+  position: relative
+  img
+    width: 100%
+    display: block
+    position: absolute
+    top: -50%
+
+.preview
+  img
+    width: 100%
+    display: block
+
+.sources-wrapper
+
+  position: relative
+  height: 500px
+  width: 100%
+  background: rgba(0,0,0,0.5)
+  color: #fff
+  text-align: center
+
+  .sources
+    display: inline-block
+
+    &>div
+      box-shadow: 0 2px 0 rgba(0,0,0,0.2), inset 0 1px 1px rgba(255,255,255,0.4)
+
+      [class*=icon-]
+        text-shadow: 0 1px 2px rgba(0,0,0,0.4)
+        position: relative
+        top: 0
+        bottom: 2px
+
+      &:active
+        box-shadow: inset 0 2px 0 rgba(0,0,0,0.2), 0 1px 1px rgba(255,255,255,0.4)
+
+        [class*=icon-]
+          text-shadow: none
+          top: 2px
+          bottom: 0
+
+
+  .camera
+    display: inline-block
+    background: $red
+    padding: $fontSizeNormal * 2
+    border-radius: $fontSizeNormal * 10
+    margin-bottom: $fontSizeNormal
+
+    [class*=icon-]
+      font-size: $fontSizeNormal * 4
+      line-height: $fontSizeNormal * 2
+
+  .gallery
+    background: $orange
+    display: inline-block
+    padding: $fontSizeNormal * 1.5
+    border-radius: $fontSizeNormal * 10
+
+    [class*=icon-]
+      font-size: $fontSizeNormal * 2
+      line-height: $fontSizeNormal * 2

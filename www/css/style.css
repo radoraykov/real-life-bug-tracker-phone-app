@@ -1,0 +1,247 @@
+body {
+  background: white; }
+
+* {
+  box-sizing: border-box; }
+
+ul, li {
+  margin: 0;
+  list-style: none;
+  padding: 0; }
+
+input {
+  padding: 5px 4px;
+  border: none; }
+
+.homeScreen {
+  background: url("../img/bg.png") no-repeat top center;
+  background-size: 100%; }
+
+.button {
+  display: block;
+  line-height: 40px;
+  font-size: 25px;
+  padding: 10px 0 11px;
+  text-align: center;
+  background: #eb6a55;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 5px 0;
+  border-radius: 3px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), inset -1px 0 rgba(255, 255, 255, 0.3); }
+  .button:active {
+    box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+    text-shadow: none;
+    padding: 11px 0 10px; }
+  .button.facebook {
+    background: #4c67a1; }
+  .button.success {
+    background: #57bca8; }
+  .button.unobtrusive {
+    background: #c4bdad; }
+
+header {
+  height: 100px;
+  background: #eb6a55; }
+  header a {
+    color: white;
+    text-decoration: none; }
+  header .details {
+    float: left;
+    width: 100px;
+    height: 100px;
+    font-size: 25px;
+    line-height: 100px;
+    text-align: center; }
+  header .add {
+    float: right;
+    height: 100px;
+    font-size: 25px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 25px; }
+  header .logo {
+    background: url("../img/smalllogo.png") no-repeat center;
+    background-size: 100%;
+    display: block;
+    width: 148px;
+    height: 100px;
+    float: left; }
+
+list {
+  background: white;
+  display: block;
+  padding: 10px; }
+  list .title {
+    background: #e3e3e3;
+    font-weight: bold;
+    padding: 25px;
+    font-size: 25px; }
+  list li a {
+    font-size: 25px;
+    display: block;
+    color: #333333;
+    padding: 22.72727px;
+    border-bottom: solid 1px #e5e5e5;
+    text-decoration: none; }
+    list li a:active {
+      background: #fafafa; }
+  list li ul li:last-child a {
+    border-bottom: none; }
+
+tabs, footer {
+  display: block;
+  height: 100px; }
+  tabs a, footer a {
+    text-decoration: none;
+    font-size: 50px;
+    background: #fcfaf7;
+    color: #989795;
+    height: 115px;
+    line-height: 115px;
+    text-align: center;
+    width: 50%;
+    float: left; }
+    tabs a:first-child, footer a:first-child {
+      box-shadow: inset -10px 10px 10px rgba(255, 255, 255, 0.5); }
+      tabs a:first-child.selected, footer a:first-child.selected {
+        box-shadow: inset -10px 10px 10px rgba(0, 0, 0, 0.05), inset -2px 2px 5px rgba(0, 0, 0, 0.1);
+        background: #ebe8e2;
+        color: #222222; }
+    tabs a:last-child, footer a:last-child {
+      box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.5); }
+      tabs a:last-child.selected, footer a:last-child.selected {
+        box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05), inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+        background: #ebe8e2;
+        color: #222222; }
+
+search {
+  padding: 10px;
+  display: block; }
+  search .search-field {
+    border-radius: 3px;
+    position: relative;
+    font-size: 25px; }
+  search .icon-search {
+    color: #999999;
+    top: 8px;
+    vertical-align: middle;
+    line-height: 40px;
+    left: 12.5px;
+    position: absolute;
+    font-size: 25px; }
+  search input {
+    color: #333333;
+    outline: none;
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    font-size: 25px;
+    bakgound: white;
+    text-indent: 37.5px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-top: solid 1px rgba(0, 0, 0, 0.3);
+    border-left: solid 1px rgba(0, 0, 0, 0.2);
+    border-right: solid 1px rgba(0, 0, 0, 0.2); }
+
+footer {
+  display: block;
+  height: 115px; }
+  footer a {
+    text-decoration: none;
+    font-size: 25px;
+    background: #4b515f;
+    color: #dddddd;
+    height: 115px;
+    line-height: 115px;
+    text-align: center;
+    width: 50%;
+    float: left; }
+    footer a:first-child {
+      box-shadow: inset -10px 10px 30px rgba(255, 255, 255, 0.1); }
+      footer a:first-child.selected {
+        box-shadow: inset -10px -10px 20px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(0, 0, 0, 0.1), inset -2px 2px 5px rgba(0, 0, 0, 0.1);
+        background: #30343f;
+        color: white; }
+    footer a:last-child {
+      box-shadow: inset 10px 10px 30px rgba(255, 255, 255, 0.1); }
+      footer a:last-child.selected {
+        box-shadow: inset 10px -10px 20px rgba(0, 0, 0, 0.1), inset 5px -5px 10px rgba(0, 0, 0, 0.1), inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+        background: #30343f;
+        color: white; }
+
+.report-info h1 {
+  font-weight: bold;
+  font-size: 37.5px;
+  margin: 0; }
+.report-info .details {
+  font-size: 15px; }
+.report-info .description {
+  font-size: 25px; }
+
+.map-wrapper .map {
+  background: #e9e5dd;
+  height: 200px; }
+.map-wrapper .address {
+  background: fcfbf9;
+  padding: 10px;
+  font-size: 15px; }
+.map-wrapper .proximity {
+  float: right; }
+
+.small-preview {
+  height: 300px;
+  overflow: hidden;
+  position: relative; }
+  .small-preview img {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: -50%; }
+
+.preview img {
+  width: 100%;
+  display: block; }
+
+.sources-wrapper {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center; }
+  .sources-wrapper .sources {
+    display: inline-block; }
+    .sources-wrapper .sources > div {
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.4); }
+      .sources-wrapper .sources > div [class*=icon-] {
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+        position: relative;
+        top: 0;
+        bottom: 2px; }
+      .sources-wrapper .sources > div:active {
+        box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2), 0 1px 1px rgba(255, 255, 255, 0.4); }
+        .sources-wrapper .sources > div:active [class*=icon-] {
+          text-shadow: none;
+          top: 2px;
+          bottom: 0; }
+  .sources-wrapper .camera {
+    display: inline-block;
+    background: #eb6a55;
+    padding: 50px;
+    border-radius: 250px;
+    margin-bottom: 25px; }
+    .sources-wrapper .camera [class*=icon-] {
+      font-size: 100px;
+      line-height: 50px; }
+  .sources-wrapper .gallery {
+    background: #ffa754;
+    display: inline-block;
+    padding: 37.5px;
+    border-radius: 250px; }
+    .sources-wrapper .gallery [class*=icon-] {
+      font-size: 50px;
+      line-height: 50px; }
