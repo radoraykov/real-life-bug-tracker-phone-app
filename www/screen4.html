@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Grada.me</title>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1" />
+        
+        
+		<link rel="stylesheet" type="text/css" href="css/gradame.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+	
+		<link rel="stylesheet" type="text/css" href="css/icons.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		
+		<!-- Google Map API -->
+        <script type="text/javascript" 
+                src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=true&amp;libraries=places">
+        </script> 
+        <script type="text/javascript" src="js/extensions/GeoLocationPrototype.js"></script>
+        <!-- Google Map API -->
+		<style>
+			#geoLocation
+            {
+                border: 1px solid red;
+            }
+		</style>
+		
+	</head>
+	<body>
+		<header>
+			<a href="#" class="details icon-flickr"></a>
+			<div class="logo"></div>
+			<a href="#" class="add">НОВО <span class="icon-plus-squared"></span></a>
+		</header>
+		<br/>
+		<div class="preview">
+			<img src="img/sample-image.png" />
+		</div>
+		<br/>
+		
+		<div class="map-wrapper">
+			<div class="map" id="geoLocation"></div>
+			<div class="address">
+				адрес: ул. Иван Вазов 2
+				<span class="proximity">~10 м.</span>
+			</div>
+		</div>
+
+		<div class="report-info">
+			<h1>Липсващ капак на шахта</h1>
+			<div class="details">
+				<div class="added-by">добавено от: Иван Иванов</div>
+				<div class="added-date">на: 20.12.2013г. 12:02ч.</div>
+			</div>
+
+			<p class="description">
+				Има опасна електрическа инсталация
+				достъпна за домашни животни и
+				малки деца.
+			</p>
+		</div>
+
+
+		</body>
+</html>
