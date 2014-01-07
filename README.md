@@ -111,6 +111,6 @@ http://software.intel.com/en-us/articles/speeding-up-the-android-emulator-on-int
 sudo yum install @virtualization
 sudo systemctl start libvirtd
 sudo systemctl enable libvirtd
-sudo gpasswd -a ubuntu kvm
+sudo gpasswd -a <вашия unix потребител> kvm
 ```
 
