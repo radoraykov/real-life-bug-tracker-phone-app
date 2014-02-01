@@ -2,7 +2,6 @@
 BASEDIR=$(cd "$(dirname "$0")"; pwd)
 
 cd $BASEDIR
-#sudo npm install -g ripple-emulator
 cordova plugin add org.apache.cordova.geolocation
 cordova plugin add org.apache.cordova.camera
 cordova plugin add org.apache.cordova.device

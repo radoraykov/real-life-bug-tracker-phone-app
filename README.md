@@ -53,7 +53,7 @@
 ```
 (sudo) npm -g install ionic
 (sudo) npm -g install cordova
-(sudo) npm -g install riple-emulator
+(sudo) npm -g install ripple-emulator
 (sudo) npm -g install phonegap
 ```
 
@@ -61,6 +61,20 @@
 
 ```
 ./build.sh
+```
+
+### Подкарване на приложението
+
+#### В браузърен емулатор
+
+```
+ripples emulate
+```
+
+#### В java емулатор
+
+```
+phonegap run android
 ```
 
 ### Тест

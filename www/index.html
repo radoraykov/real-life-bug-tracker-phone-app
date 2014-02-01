@@ -1,123 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1" />
-        <link rel="stylesheet" type="text/css" href="css/appframework/af.ui.base.css" />
-        <link rel="stylesheet" type="text/css" href="css/appframework/icons.css" />
-        <link rel="stylesheet" type="text/css" href="css/gradame.css" />
-        <link rel="stylesheet" type="text/css" href="css/main.css" />
+<head>
+    <meta charset="utf-8">
+    <title>Ionic Seed</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/lib/appframework/appframework.js"></script>
-        <script type="text/javascript" src="js/lib/appframework/plugins/af.actionsheet.js"></script>
-        <script type="text/javascript" src="js/lib/appframework/plugins/af.css3animate.js"></script>
-        <script type="text/javascript" src="js/lib/appframework/plugins/af.passwordBox.js"></script>
-        <script type="text/javascript" src="js/lib/appframework/plugins/af.scroller.js"></script>
-        <script type="text/javascript" src="js/lib/appframework/plugins/af.selectBox.js"></script>
-        <script type="text/javascript" src="js/lib/appframework/plugins/af.touchEvents.js"></script>
-        <script type="text/javascript" src="js/lib/appframework/plugins/af.touchLayer.js"></script>
-        <script type="text/javascript" src="js/lib/appframework/plugins/af.popup.js"></script>
+    <!-- ionic css -->
+    <link href="css/ionic.css" rel="stylesheet">
 
-        <script type="text/javascript" src="js/lib/appframework/appframework.ui.js"></script>
-        <script type="text/javascript" src="js/lib/appframework/plugins/af.transitions.js"></script>
-        
-        <!-- Google Map API -->
-        <script type="text/javascript" 
-                src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=true&amp;libraries=places">
-        </script> 
-        <script type="text/javascript" src="js/extensions/GeoLocationPrototype.js"></script>
-        <!-- Google Map API -->
+    <!-- your app's css -->
+    <link href="css/app.css" rel="stylesheet">
 
-        <script type="text/javascript">
-            $.os.useOSThemes = false;
-            $.ui.autoLaunch = false;
-            $.ui.openLinksNewTab = false;
-            $.ui.showBackButton = false;
-            $.ui.lockPageBounce = true;
-            $.ui.canCollapse = true;
+    <!-- ionic/angularjs scripts -->
+    <script src="js/ionic.js"></script>
+    <!-- google maps javascript -->
+    <script src='http://maps.googleapis.com/maps/api/js?sensor=false'></script>
+    <script src="js/underscore-min.js"></script>
+    <script src="js/angular/angular.js"></script>
+    <script src="js/angular/angular-animate.js"></script>
+    <script src="js/angular/angular-route.js"></script>
+    <script src="js/angular/angular-touch.js"></script>
+    <script src="js/angular/angular-sanitize.js"></script>
+    <script src="js/angular/angular-google-maps.js"></script>
+    <script src="js/ionic-angular.js"></script>
 
-            $.app = { version: '0.0.1', panel: null, router: null, database: null, photos: [], ui: {}, userId: null };
-            $(document).ready(function() {
-                $.ui.launch();
-                $.ui.removeFooterMenu();
-                if ($('#aside_menu').length) $('#aside_menu').remove();
-            });
+    <!-- Needed for Cordova/PhoneGap -->
+    <script type="text/javascript" src="cordova.js"></script>
 
-            function showHide(obj, objToHide, noClassChange) {
-                if (!$.ui.canCollapse) return;
-                var $el = $("#" + objToHide);
 
-                if (typeof noClassChange === 'undefined' || !noClassChange) {
-                    if (obj.className == "expanded") {
-                        obj.className = "collapsed";
-                    } else {
-                        obj.className = "expanded";
-                    }
-                }
-                $.ui.scrollToTop('#' + $.app.panel);
-                $el.toggleClass('collapsed-element').toggle();
-            }
+    <!-- your app's script -->
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+</head>
 
-            function loadedPanel(what) {
-                console.log('loaded ' + what.id);
+<!-- 'starter' is the name of this angular module (js/app.js)-->
+<body ng-app="starter">
 
-                $.app.panel = what.id;
-                $('body').addClass($.app.panel);
+<!-- Our navigation router with some animations set -->
+<pane nav-router>
+    <!-- where the content of each page will be rendered -->
+    <ng-view></ng-view>
+</pane>
 
-                if ($.app.router) {
-                    $.app.router.navigate(what.id, { trigger: true, replace: true });
-                }
-            }
-
-            function unloadedPanel(what) {
-                console.log('unloaded ' + what.id);
-                $('body').removeClass($.app.panel).removeClass('loaded');
-                $.app.panel = null;
-            }
-
-            if (!((window.DocumentTouch && document instanceof DocumentTouch) || 'ontouchstart' in window)) {
-                var script = document.createElement('script');
-                script.src = 'js/lib/appframework/plugins/af.desktopBrowsers.js';
-                var tag = $('head').append(script);
-            }
-        </script>
-        <script data-main="js/start" src="js/lib/require.js"></script>
-
-        <title>Grada.me</title>
-
-        <style>
-            #geoLocation
-            {
-                width: 100px;
-                height: 100px;
-                border: 1px solid red;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="afui" class="gradame">
-            <div id="header" onclick="$.ui.scrollToTop('#' + $.app.panel);">
-                <!--<a id="menubadge" onclick='$.ui.toggleSideMenu();' class="menuButton"></a>-->
-                <a id="back-button" class="header-button icon big left back-button float-left hidden"></a>
-                <a id="refresh-library" class="icon refresh big header-button float-right hidden"></a>
-            </div>
-
-            <div id="content">
-                <div title="Homescreen" id="home" class="panel" selected="true" data-load="loadedPanel" data-unload="unloadedPanel" data-tab="navbar_home">
-                    
-                </div>
-            </div>
-
-            <div id="navbar">
-                <footer id="footerui">
-                    <a href="#home" id="navbar_home" class="icon home" data-ignore-pressed="true" data-resethistory="true" style="width: 50%;">Test 1</a>
-                    <a href="#newpage" id="navbar_newpage" class="icon stack" data-ignore-pressed="true" data-resethistory="true" style="width: 50%;">Test 2</a>
-                </footer>
-            </div>
-
-            <div id="geoLocation"></div>
-        </div>
-    </body>
+</body>
 </html>
