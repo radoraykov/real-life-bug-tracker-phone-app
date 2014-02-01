@@ -1,14 +1,31 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.obshtestvo.gradame" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Grada</name>
+<widget id="com.obshtestvo.gradame"
+        version="0.0.1"
+        xmlns="http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>GRADA.me</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Виж проблем, подай сигнал, помогни да бъде разрешен
     </description>
-    <author email="dev@callback.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="info@obshtestvo.bg" href="http://www.grada.me">
+        Obshtestvo.bg
     </author>
+
+    <!-- ref: https://github.com/phonegap/phonegap-start/blob/master/www/config.xml -->
     <content src="index.html" />
     <access origin="*" />
-    <preference name="fullscreen" value="false" />
-    <preference name="webviewbounce" value="true" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="orientation" value="portrait" />
+    <access uri="http://google.com" subdomains="true" />
+    <feature name="http://api.phonegap.com/1.0/geolocation" />
+    <gap:plugin name="org.apache.cordova.camera" />
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.media-capture" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova.file" />
+    <gap:plugin name="org.apache.cordova.geolocation" />
 </widget>
